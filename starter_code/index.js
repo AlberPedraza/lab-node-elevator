@@ -2,4 +2,8 @@ const Elevator = require('./elevator.js');
 
 elevator = new Elevator();
 
-elevator.log();
+elevator.floorUp();
+elevator.floorUp();
+elevator.floorUp();
+elevator.floorUp();
+elevator.floorDown();

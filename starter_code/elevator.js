@@ -11,16 +11,26 @@ class Elevator {
   stop() {
     clearInterval(start());
   }
-  update() {
-    this.log();
+  update(x) {
+    this.log(`Estas en la planta: ${this.floor}`);
   }
   _passengersEnter() { }
   _passengersLeave() { }
-  floorUp() { }
-  floorDown() { }
+  floorUp() {
+    if(this.floor >= 0 || this.floor < 6){
+      this.floor++;
+      this.log(this.requests[0],this.floor);
+    }
+   }
+  floorDown() {
+    if(this.floor >= 0 || this.floor < 6){
+      this.floor--;
+      this.log(this.requests[1],this.floor);
+    }
+  }
   call() { }
-  log() {
-    console.log(`Direction: ${this.requests[0]} | Floor: ${this.floor}`);
+  log(dir,flo) {
+    console.log(`Direction: ${dir} | Floor: ${flo}`);
    }
 }
 
